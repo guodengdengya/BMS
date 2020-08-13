@@ -1,0 +1,1344 @@
+﻿<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>树</title>
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<link href="static/css/title.css" rel="stylesheet"  />
+		<script type="text/javascript" src="static/js/jquery.js"></script>
+		<script type="text/javascript" src="static/js/jquery.idTabs.min.js"></script>
+		<script type="text/javascript" src="static/js/select-ui.min.js"></script>
+		<script type="text/javascript" src="static/editor/kindeditor.js"></script>
+		<meta name="generator" content="Aspose.Words for .NET 15.1.0.0" />
+	</head>
+	<body>
+	<div class="place">
+		<span>位置：</span>
+		<ul class="placeul">
+			<li><a href="leftHtml">数据结构知识点管理系统</a></li>
+			<li>数据结构</li>
+		</ul>
+	</div>
+		<div>
+			<p style="border-bottom-color:#4472c4; border-bottom-style:solid; border-bottom-width:0.75pt; border-top-color:#4472c4; border-top-style:solid; border-top-width:0.75pt; margin:18pt 43.2pt; orphans:0; padding-bottom:10pt; padding-top:10pt; text-align:center; widows:0">
+				<a name="_Hlk48154830">
+				</a>
+				<span style="color:#4472c4; font-family:华光彩云_CNKI; font-size:36pt; font-style:normal; font-weight:bold">
+					树
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:center; widows:0">
+				<a name="sub58783_1_1">
+				</a>
+				<a name="常见排序算法">
+					<span style="-aw-bookmark-end:sub58783_1_1">
+					</span>
+				</a>
+				<span style="color:#4472c4; font-family:华文彩云; font-size:22pt; font-weight:bold">
+					哈夫曼编码
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="color:#4472c4; font-family:华文楷体; font-size:18pt; font-weight:bold">
+					哈夫曼树
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt">
+					哈夫曼树是使
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					带权路径
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					程度最小的二叉树。构造哈夫曼树时首先合并权值最小的两个结点，合成结点的权值
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					为之前两个结点权
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					值之
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					和
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					。然后再合并
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					当前权
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					值最小的两个结点，依次重复，直到结束，就可以获得哈夫曼树。
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt">
+					哈夫曼树结点的结构如下：
+				</span>
+			</p>
+			<div style="text-align:center">
+				<table cellspacing="0" cellpadding="0" style="border-collapse:collapse; margin:0 auto">
+					<tr style="height:15.55pt">
+						<td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; vertical-align:top; width:96.55pt">
+							<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+								<span style="font-family:等线; font-size:14pt">
+									左儿子
+								</span>
+								<span style="font-family:等线; font-size:14pt">
+									信息
+								</span>
+							</p>
+						</td>
+						<td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; vertical-align:top; width:79.15pt">
+							<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+								<span style="font-family:等线; font-size:14pt">
+									双亲信息
+								</span>
+							</p>
+						</td>
+						<td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; vertical-align:top; width:84.3pt">
+							<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+								<span style="font-family:等线; font-size:14pt">
+									结点权值
+								</span>
+							</p>
+						</td>
+						<td style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.75pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.75pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.75pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.75pt; vertical-align:top; width:98.5pt">
+							<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+								<span style="font-family:等线; font-size:14pt">
+									右儿子信息
+								</span>
+							</p>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<p style="margin:0.5pt 0pt 0pt 27pt; orphans:0; widows:0">
+				<span style="font-family:宋体; font-size:8.5pt">
+					&#xa0;
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<a name="_.2哈夫曼编码">
+				</a>
+				<span style="color:#4472c4; font-family:华文楷体; font-size:18pt; font-weight:bold">
+					哈夫曼编码
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt">
+					哈夫曼编码是前缀
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					不
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					等长编码。编码时给哈夫曼树的左边标注
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					0
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					，右边标注
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					1.
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					节点的编码即从根结点开始到每个叶结点的
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					01
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					组合。
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt; font-weight:bold">
+					例
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					假设有权值分别为
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					{1 4 7 8 9 }
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					的五个叶子结点 则哈夫曼树如图1：
+				</span>
+			</p>
+			<p style="margin:0.15pt 0pt 0pt 27pt; orphans:0; text-align:center; widows:0">
+				<img src="static/images/shu01.png" width="316" height="267"
+					 alt="" style="-aw-left-pos:0pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:0pt; -aw-wrap-type:inline"
+				/>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt">
+					哈夫曼编码为
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					1
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					：
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					000
+				</span>
+				<span style="width:18.27pt; text-indent:0pt; display:inline-block">
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					4
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					：
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					001
+				</span>
+				<span style="width:3.11pt; text-indent:0pt; display:inline-block">
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					7
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					：
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					01
+				</span>
+				<span style="width:10.11pt; text-indent:0pt; display:inline-block">
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					8
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					：
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					10
+				</span>
+				<span style="width:10.11pt; text-indent:0pt; display:inline-block">
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					9
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					：
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					11
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt">
+					&#xa0;
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:center; widows:0">
+				<span style="color:#4472c4; font-family:华文彩云; font-size:22pt; font-weight:bold">
+					用儿子兄弟法将树转化为二叉树
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt">
+					&#xa0;
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt">
+					儿子兄弟链表的结点结构如下：即用二叉树的
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					左儿子
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					表示当前树结点的第一个儿子，二叉树的
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					右儿子
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					表示当前树结点的下一个兄弟。
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:center; text-indent:21pt; widows:0">
+				<img src="static/images/shu02.png" width="472" height="123"
+					 alt="" style="-aw-left-pos:0pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:0pt; -aw-wrap-type:inline"
+				/>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt; font-weight:bold">
+					例
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					设树如图
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					2，
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					则儿子
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					兄弟表示法如图3所示，则二叉树如图4所示
+				</span>
+			</p>
+			<p style="margin:0.15pt 0pt 0pt 27pt; orphans:0; widows:0">
+				<span style="font-family:宋体; font-size:3pt">
+					&#xa0;
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:center; widows:0">
+				<img src="static/images/shu3.png" width="258" height="168"
+					 alt="" style="-aw-left-pos:0pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:0pt; -aw-wrap-type:inline"
+				/>
+			</p>
+			<p style="margin:0pt 0pt 0pt 189pt; orphans:0; text-align:center; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					图2
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					树
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:center; widows:0">
+				<img src="static/images/shu4.png" width="386" height="168"
+					 alt="" style="-aw-left-pos:0pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:0pt; -aw-wrap-type:inline"
+				/>
+			</p>
+			<p style="margin:0pt 0pt 0pt 189pt; orphans:0; text-align:center; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					图3
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					儿子兄弟链表
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:center; widows:0">
+				<img src="static/images/shu5.png" width="222" height="228"
+					 alt="" style="-aw-left-pos:0pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:0pt; -aw-wrap-type:inline"
+				/>
+			</p>
+			<p style="margin:0pt 0pt 0pt 189pt; orphans:0; text-align:center; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					图4
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					二叉树
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:center; widows:0">
+				<span style="color:#4472c4; font-family:华文彩云; font-size:22pt; font-weight:bold">
+					最小生成树算法
+				</span>
+				<a name="_.用儿子兄弟法将树转化为二叉树_">
+				</a>
+				<a name="_bookmark1">
+					<span style="-aw-bookmark-end:_.用儿子兄弟法将树转化为二叉树_">
+					</span>
+				</a>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<a name="_.普利姆算法（prim算法）">
+				</a>
+				<a name="_bookmark2">
+					<span style="-aw-bookmark-end:_.普利姆算法（prim算法）">
+					</span>
+				</a>
+				<span style="color:#4472c4; font-family:华文楷体; font-size:18pt; font-weight:bold">
+					普利
+				</span>
+				<span style="color:#4472c4; font-family:华文楷体; font-size:18pt; font-weight:bold">
+					姆
+				</span>
+				<span style="color:#4472c4; font-family:华文楷体; font-size:18pt; font-weight:bold">
+					算法（
+				</span>
+				<span style="color:#4472c4; font-family:华文楷体; font-size:18pt; font-weight:bold">
+					prim
+				</span>
+				<span style="color:#4472c4; font-family:华文楷体; font-size:18pt; font-weight:bold">
+					算法）
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<a name="_.1算法步骤">
+				</a>
+				<a name="_bookmark3">
+					<span style="-aw-bookmark-end:_.1算法步骤">
+					</span>
+				</a>
+				<span style="color:#4472c4; font-family:等线; font-size:15pt; font-variant:small-caps; font-weight:bold; letter-spacing:0.25pt">
+					算法步骤
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt">
+					1.
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					选定起始点
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt">
+					2.
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					把图中顶点分为两个顶点集
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					S,V-S
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt">
+					3.
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					分别在两个顶点集中选择一个顶点，且满足
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					顶点间权值
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					最小。将其加入生成树中。将
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					V-S
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					顶点集中选中的顶点加入
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					S
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					顶点集，并从
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					V-S
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					顶点集中删去
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt">
+					4.
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					重复步骤
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					3
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					，直到
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					V-S
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					顶点集为空集。
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<a name="_.2_例题">
+				</a>
+				<a name="_bookmark4">
+					<span style="-aw-bookmark-end:_.2_例题">
+					</span>
+				</a>
+				<span style="color:#4472c4; font-family:等线; font-size:15pt; font-variant:small-caps; font-weight:bold; letter-spacing:0.25pt">
+					例题
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt; font-weight:bold">
+					例
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					假设有图如图
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					5
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					，使用普利
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					姆
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					算法生成最小生成树如下所示。
+				</span>
+			</p>
+			<p style="margin:0.3pt 0pt 0pt; orphans:0; text-align:center; widows:0">
+				<img src="static/images/shu6.png" width="231" height="218"
+					 alt="" style="-aw-left-pos:0pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:0pt; -aw-wrap-type:inline"
+				/>
+			</p>
+			<p style="margin:0pt 0pt 0pt 147pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					图
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					5
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					假定初始点选择
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					1
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt">
+					将顶点
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					1
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					放置在
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					S
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					顶点集，其余顶点放置在
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					V-S
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					顶点集。顶点
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					1
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					与其他顶点的权值如图
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					6
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					所示， 根据普利
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					姆
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					算法步骤
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					3
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					将顶点
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					2
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					选出加入最小生成树，并移入
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					S
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					顶
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					点
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					集。
+				</span>
+			</p>
+			<p style="margin:0.55pt 0pt 0pt; orphans:0; text-align:center; widows:0">
+				<img src="static/images/shu7.png" width="636" height="227"
+					 alt="" style="-aw-left-pos:0pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:0pt; -aw-wrap-type:inline"
+				/>
+			</p>
+			<p style="margin:0pt 0pt 0pt 147pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					图
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					6
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					使用普利
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					姆
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					算法得出最小生成树步骤
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					1
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt">
+					比较顶点
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					1
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					、
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					2
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					与其他顶点的边的权值，选出顶点
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					3
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					加入最小生成树，同时将顶点
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					3
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					移入
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					S
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					顶点集，如图
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					7
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					所示：
+				</span>
+			</p>
+			<p style="margin:0.1pt 0pt 0pt; orphans:0; widows:0">
+				<span style="font-family:宋体; font-size:1.5pt">
+					&#xa0;
+				</span>
+			</p>
+			<p style="margin:0pt 0pt 0pt 27pt; orphans:0; text-align:center; widows:0">
+				<img src="static/images/shu8.png" width="560" height="256"
+					 alt="" style="-aw-left-pos:0pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:0pt; -aw-wrap-type:inline"
+				/>
+			</p>
+			<p style="margin:0.1pt 0pt 0pt; orphans:0; widows:0">
+				<span style="font-family:宋体; font-size:3pt">
+					&#xa0;
+				</span>
+			</p>
+			<p style="margin:0pt 0pt 0pt 147pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					图
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					7
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					使用普利
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					姆
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					算法得出最小生成树步骤
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					2
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt">
+					比较顶点
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					1
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					、
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					2
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					、
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					3
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					与其他顶点的边的权值，选出顶点
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					5
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					加入最小生成树，同时将顶点
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					5
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					移入
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					S
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					顶点集。如图
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					8
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					所示：
+				</span>
+			</p>
+			<p style="margin:0.05pt 0pt 0pt; orphans:0; text-align:center; widows:0">
+				<img src="static/images/shu9.png" width="658" height="250"
+					 alt="" style="-aw-left-pos:0pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:0pt; -aw-wrap-type:inline"
+				/>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:center; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:center; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					图
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					8
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					使用普利
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					姆
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					算法得出最小生成树步骤
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					3
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt">
+					同以上步骤操作，依次选出顶点
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					6
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					，顶点
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					4
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					加入最小生成树，最终得到的最小生成树如图
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					9
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					所示：
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:center; text-indent:21pt; widows:0">
+				<img src="static/images/shu10.png" width="374" height="220"
+					 alt="" style="-aw-left-pos:0pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:0pt; -aw-wrap-type:inline"
+				/>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:center; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					图
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					9
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					使用普利
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					姆
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					算法得到的最小生成树
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt">
+					加入最小生成树边的顺序为：（
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					1
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					，
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					2
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					）（
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					2
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					，
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					3
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					）（
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					3
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					，
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					5
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					）（
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					3
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					，
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					6
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					）（
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					6
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					，
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					4
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					）
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<a name="_.克鲁斯卡尔算法（Kruskal算法）">
+				</a>
+				<a name="_bookmark5">
+					<span style="-aw-bookmark-end:_.克鲁斯卡尔算法（Kruskal算法）">
+					</span>
+				</a>
+				<span style="color:#4472c4; font-family:华文楷体; font-size:18pt; font-weight:bold">
+					克鲁斯卡尔算法（
+				</span>
+				<span style="color:#4472c4; font-family:华文楷体; font-size:18pt; font-weight:bold">
+					Kruskal
+				</span>
+				<span style="color:#4472c4; font-family:华文楷体; font-size:18pt; font-weight:bold">
+					算法）
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<a name="_.1算法步骤">
+				</a>
+				<a name="_bookmark6">
+					<span style="-aw-bookmark-end:_.1算法步骤">
+					</span>
+				</a>
+				<span style="color:#4472c4; font-family:等线; font-size:15pt; font-variant:small-caps; font-weight:bold; letter-spacing:0.25pt">
+					算法步骤
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt">
+					1
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					，将图中顶点看成
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					N
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					个
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					不同的顶点集，每个
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					顶点集只含有
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					1
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					个
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					顶点。
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt">
+					2
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					，每次在不同的顶点集中选择顶点连线的边的权值最小的边加入最小生成树。直到所有的顶点都在同一个顶点集为止。
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<a name="_.2例题">
+				</a>
+				<a name="_bookmark7">
+					<span style="-aw-bookmark-end:_.2例题">
+					</span>
+				</a>
+				<span style="color:#4472c4; font-family:等线; font-size:15pt; font-variant:small-caps; font-weight:bold; letter-spacing:0.25pt">
+					例题
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt; font-weight:bold">
+					例
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					假设有图如图
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					1
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					0
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					，使用克鲁斯卡尔算法生成最小生成树如下所示。
+				</span>
+			</p>
+			<p style="margin:0.6pt 0pt 0pt; orphans:0; text-align:center; widows:0">
+				<img src="static/images/shu11.png" width="248" height="216"
+					 alt="" style="-aw-left-pos:0pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:0pt; -aw-wrap-type:inline"
+				/>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:center; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					图
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					10
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt">
+					比较各个顶点的之间边的权值，选出权值最小的（
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					2
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					，
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					3
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					）如图
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					6a
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					所示，再根据克鲁斯卡尔算法依次选出边（
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					3
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					，
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					5
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					）、（
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					3
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					，
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					6
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					）、（
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					2
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					，
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					1
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					）、（
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					6
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					，
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					4
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					）如下图所示：
+				</span>
+			</p>
+			<p style="margin:0.25pt 0pt 0pt; orphans:0; text-align:center; widows:0">
+				<img src="static/images/shu12.png" width="622" height="403"
+					 alt="" style="-aw-left-pos:0pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:0pt; -aw-wrap-type:inline"
+				/>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:center; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					图
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					6
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					使用克鲁斯卡尔算法得到最小生成树的步骤
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt">
+					最终得出最小生成树如图
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					11
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					所示：
+				</span>
+			</p>
+			<p style="margin:0pt 0pt 0pt 139.4pt; orphans:0; text-align:center; widows:0">
+				<img src="static/images/shu13.png" width="272" height="244"
+					 alt="" style="-aw-left-pos:0pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:0pt; -aw-wrap-type:inline"
+				/>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:center; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					图
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					11
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					使用克鲁斯卡尔算法得到的最小生成树
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:center; widows:0">
+				<a name="二_拓扑排序">
+				</a>
+				<a name="_bookmark8">
+					<span style="-aw-bookmark-end:二_拓扑排序">
+					</span>
+				</a>
+				<span style="color:#4472c4; font-family:华文彩云; font-size:22pt; font-weight:bold">
+					二 拓扑排序
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<a name="_bookmark9">
+				</a>
+				<span style="color:#4472c4; font-family:华文楷体; font-size:18pt; font-weight:bold">
+					基本概念
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt">
+					AOV
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					网：用有向
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					边表示
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					活动之间的优先关系的有向图，且不允许出现环。
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt">
+					拓扑排序：将
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					AOV
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					网中的所有的顶点按照他们之间的相互关系的优先顺序排成一个线性序列的过程。
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt">
+					拓扑序列：拓扑排序所得到的序列。
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<a name="_.排序算法步骤">
+				</a>
+				<a name="_bookmark10">
+					<span style="-aw-bookmark-end:_.排序算法步骤">
+					</span>
+				</a>
+				<span style="color:#4472c4; font-family:华文楷体; font-size:18pt; font-weight:bold">
+					排序算法步骤
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt">
+					1
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					，在有向图中选择一个没有前驱的顶点并输出。
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt">
+					2
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					，在图中删除该顶点和所有以它为尾的弧。
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt">
+					3
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					，重复
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					1
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					、
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					2
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					，直到所有顶点都已输出，或者当图中不存在无前驱的结点为止。
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<a name="_.例题">
+				</a>
+				<a name="_bookmark11">
+					<span style="-aw-bookmark-end:_.例题">
+					</span>
+				</a>
+				<span style="color:#4472c4; font-family:华文楷体; font-size:18pt; font-weight:bold">
+					例题
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt; font-weight:bold">
+					例
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					假设有
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					AOV
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					网如图
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					12
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					所示，则其拓扑排序步骤如下：
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:center; text-indent:21pt; widows:0">
+				<img src="static/images/shu14.png" width="417" height="214"
+					 alt="" style="-aw-left-pos:0pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:0pt; -aw-wrap-type:inline"
+				/>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:center; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					图
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					12
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					AOV
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					网图
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:14pt">
+					先选择没有前驱的顶点
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					C1
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					，如图
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					9a
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					所示；之后删除
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					C1
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					并将以它为尾的弧删去，之后再选择没有前驱的结点
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					C3,
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					如图
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					9b
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					所示；删除
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					C3
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					并将以
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					C3
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					为尾的弧删去，之后选择
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					C6
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					如图
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					9c
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					所示；其余步骤如图例所示，依次输出
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					C4-&gt;C7-&gt;C2-&gt;C5-&gt;C8-&gt;C9-&gt;C10
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					。所有结点输出，排序结束。
+				</span>
+			</p>
+			<p style="margin:0pt 0pt 0pt 6pt; orphans:0; text-align:center; widows:0">
+				<img src="static/images/shu15.png" width="651" height="470"
+					 alt="" style="-aw-left-pos:0pt; -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-top-pos:0pt; -aw-wrap-type:inline"
+				/>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:center; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					图
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					9
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					拓扑排序步骤
+				</span>
+			</p>
+			<p style="margin:2.15pt 0pt 0pt 27pt; orphans:0; widows:0">
+				<span style="font-family:等线; font-size:14pt">
+					则此次拓扑排序顺序为
+				</span>
+				<span style="font-family:等线; font-size:14pt">
+					C1-&gt;C3-&gt;C6-&gt;C4-&gt;C7-&gt;C2-&gt;C5-&gt;C8-&gt;C9-&gt;C10
+				</span>
+			</p>
+		</div>
+		<div class="cnzz" style="display: none;">
+			<script src="https://s23.cnzz.com/z_stat.php?id=1277655852&web_id=1277655852"
+					language="JavaScript">
+			</script>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,183 @@
+﻿<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>队列</title>
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<link href="static/css/title.css" rel="stylesheet"  />
+		<script type="text/javascript" src="static/js/jquery.js"></script>
+		<script type="text/javascript" src="static/js/jquery.idTabs.min.js"></script>
+		<script type="text/javascript" src="static/js/select-ui.min.js"></script>
+		<script type="text/javascript" src="static/editor/kindeditor.js"></script>
+		<meta name="generator" content="Aspose.Words for .NET 15.1.0.0" />
+	</head>
+	<body>
+	<div class="place">
+		<span>位置：</span>
+		<ul class="placeul">
+			<li><a href="leftHtml">数据结构知识点管理系统</a></li>
+			<li>数据结构</li>
+		</ul>
+	</div>
+		<div>
+			<p style="border-bottom-color:#4472c4; border-bottom-style:solid; border-bottom-width:0.75pt; border-top-color:#4472c4; border-top-style:solid; border-top-width:0.75pt; margin:18pt 43.2pt; orphans:0; padding-bottom:10pt; padding-top:10pt; text-align:center; widows:0">
+				<span style="color:#4472c4; font-family:华光彩云_CNKI; font-size:36pt; font-style:normal; font-weight:bold">
+					队列
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:center; widows:0">
+				<a name="sub58783_1_1">
+				</a>
+				<a name="常见排序算法">
+					<span style="-aw-bookmark-end:sub58783_1_1">
+					</span>
+				</a>
+				<span style="color:#4472c4; font-family:华文彩云; font-size:22pt; font-weight:bold">
+					基础概念
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					队列也是表，队列以FIFO（先进先出）的方式排序各个元素，根据提供的比较器或元素的自然顺序对元素进行排序，队列的头都是调用remove()或poll()所移除的元素，每个新元素都插入队列的末尾，而删除在另一端进行。可以使用数组实现也可以使用链表实现。每个Queue实现必须指定其顺序属性。
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:center; widows:0">
+				<span style="color:#4472c4; font-family:华文彩云; font-size:22pt; font-weight:bold">
+					常用方法
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					1）
+				</span>
+				<a style="color:#000000" href="mk:@MSITStore:E:\微信文档\WeChat%20Files\Zy222920\FileStorage\File\2020-04\JDK_API_1_6_zh_CN.CHM::/java/util/../../java/util/Queue.html#add(E)">
+					<span style="font-family:等线; font-size:12pt">
+						add
+					</span>
+				</a>
+				<span style="font-family:等线; font-size:12pt">
+					(
+				</span>
+				<a style="color:#000000" href="mk:@MSITStore:E:\微信文档\WeChat%20Files\Zy222920\FileStorage\File\2020-04\JDK_API_1_6_zh_CN.CHM::/java/util/../../java/util/Queue.html">
+					<span style="font-family:等线; font-size:12pt">
+						E
+					</span>
+				</a>
+				<span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					e) 将指定的元素插入此队列（如果立即可行且不会违反容量限制），在成功时返回 true，如果当前没有可用的空间，则抛出
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					IllegalStateException
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					。
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					2）
+				</span>
+				<a style="color:#000000" href="mk:@MSITStore:E:\微信文档\WeChat%20Files\Zy222920\FileStorage\File\2020-04\JDK_API_1_6_zh_CN.CHM::/java/util/../../java/util/Queue.html#element()">
+					<span style="font-family:等线; font-size:12pt">
+						element
+					</span>
+				</a>
+				<span style="font-family:等线; font-size:12pt">
+					() 获取，但是不移除此队列的头。
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					3）
+				</span>
+				<a style="color:#000000" href="mk:@MSITStore:E:\微信文档\WeChat%20Files\Zy222920\FileStorage\File\2020-04\JDK_API_1_6_zh_CN.CHM::/java/util/../../java/util/Queue.html#offer(E)">
+					<span style="font-family:等线; font-size:12pt">
+						offer
+					</span>
+				</a>
+				<span style="font-family:等线; font-size:12pt">
+					(
+				</span>
+				<a style="color:#000000" href="mk:@MSITStore:E:\微信文档\WeChat%20Files\Zy222920\FileStorage\File\2020-04\JDK_API_1_6_zh_CN.CHM::/java/util/../../java/util/Queue.html">
+					<span style="font-family:等线; font-size:12pt">
+						E
+					</span>
+				</a>
+				<span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					e) 将指定的元素插入此队列（如果立即可行且不会违反容量限制），当使用有容量限制的队列时，此方法通常要优于
+				</span>
+				<a style="color:#000000" href="mk:@MSITStore:E:\微信文档\WeChat%20Files\Zy222920\FileStorage\File\2020-04\JDK_API_1_6_zh_CN.CHM::/java/util/../../java/util/Queue.html#add(E)">
+					<span style="font-family:等线; font-size:12pt">
+						add(E)
+					</span>
+				</a>
+				<span style="font-family:等线; font-size:12pt">
+					，后者可能无法插入元素，而只是抛出一个异常。
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					4）
+				</span>
+				<a style="color:#000000" href="mk:@MSITStore:E:\微信文档\WeChat%20Files\Zy222920\FileStorage\File\2020-04\JDK_API_1_6_zh_CN.CHM::/java/util/../../java/util/Queue.html#peek()">
+					<span style="font-family:等线; font-size:12pt">
+						peek
+					</span>
+				</a>
+				<span style="font-family:等线; font-size:12pt">
+					() 获取但不移除此队列的头；如果此队列为空，则返回 null。
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					5）
+				</span>
+				<a style="color:#000000" href="mk:@MSITStore:E:\微信文档\WeChat%20Files\Zy222920\FileStorage\File\2020-04\JDK_API_1_6_zh_CN.CHM::/java/util/../../java/util/Queue.html#poll()">
+					<span style="font-family:等线; font-size:12pt">
+						poll
+					</span>
+				</a>
+				<span style="font-family:等线; font-size:12pt">
+					()
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					获取并移除此队列的头，如果此队列为空，则返回 null。
+				</span>
+			</p>
+			<p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					6）
+				</span>
+				<a style="color:#000000" href="mk:@MSITStore:E:\微信文档\WeChat%20Files\Zy222920\FileStorage\File\2020-04\JDK_API_1_6_zh_CN.CHM::/java/util/../../java/util/Queue.html#remove()">
+					<span style="font-family:等线; font-size:12pt">
+						remove
+					</span>
+				</a>
+				<span style="font-family:等线; font-size:12pt">
+					()
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+				<span style="font-family:等线; font-size:12pt">
+					获取并移除此队列的头。
+				</span>
+			</p>
+		</div>
+		<div class="cnzz" style="display: none;">
+			<script src="https://s23.cnzz.com/z_stat.php?id=1277655852&web_id=1277655852"
+			language="JavaScript">
+			</script>
+		</div>
+
+	</body>
+
+</html>

@@ -1,0 +1,1809 @@
+﻿<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="generator" content="Aspose.Words for .NET 15.1.0.0" />
+
+	<title>排序</title>
+	<link href="static/css/title.css" rel="stylesheet"  />
+
+	<script type="text/javascript" src="static/js/jquery.js"></script>
+	<script type="text/javascript" src="static/js/jquery.idTabs.min.js"></script>
+	<script type="text/javascript" src="static/js/select-ui.min.js"></script>
+	<script type="text/javascript" src="static/editor/kindeditor.js"></script>
+</head>
+<body>
+<div class="place">
+	<span>位置：</span>
+	<ul class="placeul" >
+		<li><a href="leftHtml">数据结构知识点管理系统</a></li>
+		<li>数据结构</li>
+	</ul>
+</div>
+<div>
+    <div style="border-bottom-color:#4472c4; border-bottom-style:solid; border-bottom-width:0.75pt; border-top-color:#4472c4; border-top-style:solid; border-top-width:0.75pt; clear:both; margin:18pt 43.2pt">
+        <p style="margin:0pt; orphans:0; padding-bottom:18pt; padding-top:10pt; text-align:center; widows:0">
+					<span style="color:#4472c4; font-family:华光彩云_CNKI; font-size:36pt; font-style:normal; font-weight:bold">
+						排序
+					</span>
+        </p>
+        <p style="margin:0pt; orphans:0; padding-bottom:10pt; widows:0">
+					<span style="color:#4472c4; font-family:华光行楷_CNKI; font-size:11pt; font-style:normal; font-weight:bold">
+						排序是计算机内经常进行的一种操作，其目的是将一组“无序”的记录序列调整为“有序”的记录序列。分
+					</span>
+            <a style="color:#4472c4" href="https://baike.baidu.com/item/%E5%86%85%E9%83%A8%E6%8E%92%E5%BA%8F"
+               target="https://baike.baidu.com/item/_blank">
+						<span style="color:#4472c4; font-family:华光行楷_CNKI; font-size:11pt; font-style:normal; font-weight:bold">
+							内部排序
+						</span>
+            </a>
+            <span style="color:#4472c4; font-family:华光行楷_CNKI; font-size:11pt; font-style:normal; font-weight:bold">
+						和
+					</span>
+            <a style="color:#4472c4" href="https://baike.baidu.com/item/%E5%A4%96%E9%83%A8%E6%8E%92%E5%BA%8F"
+               target="https://baike.baidu.com/item/_blank">
+						<span style="color:#4472c4; font-family:华光行楷_CNKI; font-size:11pt; font-style:normal; font-weight:bold">
+							外部排序
+						</span>
+            </a>
+            <span style="color:#4472c4; font-family:华光行楷_CNKI; font-size:11pt; font-style:normal; font-weight:bold">
+						，若整个排序过程不需要访问外存便能完成，则称此类排序问题为内部排序。反之，
+					</span>
+            <span style="color:#4472c4; font-family:华光行楷_CNKI; font-size:11pt; font-style:normal; font-weight:bold">
+						若参
+					</span>
+            <span style="color:#4472c4; font-family:华光行楷_CNKI; font-size:11pt; font-style:normal; font-weight:bold">
+						加排序的记录数量很大，整个序列的排序过程不可能在
+					</span>
+            <a style="color:#4472c4" href="https://baike.baidu.com/item/%E5%86%85%E5%AD%98/103614"
+               target="https://baike.baidu.com/item/_blank">
+						<span style="color:#4472c4; font-family:华光行楷_CNKI; font-size:11pt; font-style:normal; font-weight:bold">
+							内存
+						</span>
+            </a>
+            <span style="color:#4472c4; font-family:华光行楷_CNKI; font-size:11pt; font-style:normal; font-weight:bold">
+						中完成，则称此类排序问题为外部排序。内部排序的过程是一个逐步扩大记录的有序序列长度的过程。
+					</span>
+        </p>
+    </div>
+    <p style="margin:0pt; orphans:0; text-align:center; widows:0">
+        <a name="sub58783_1_1">
+        </a>
+        <a name="常见排序算法">
+					<span style="-aw-bookmark-end:sub58783_1_1">
+					</span>
+        </a>
+        <span style="color:#4472c4; font-family:华文彩云; font-size:22pt; font-weight:bold">
+					插入类排序
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="color:#4472c4; font-family:华文楷体; font-size:18pt; font-weight:bold">
+					直接插入类排序
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					直接
+				</span>
+        <a style="color:#000000" href="https://baike.baidu.com/item/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F"
+           target="https://baike.baidu.com/item/_blank">
+					<span style="font-family:等线; font-size:12pt">
+						插入排序
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					（Straight Insertion Sort）是一种最简单的排序方法，其基本操作是将一条记录插入到已排好的有序表中，从而得到一个新的、记录数量增1的有序表。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="color:#4472c4; font-family:等线; font-size:14pt; font-variant:small-caps; font-weight:bold; letter-spacing:0.25pt">
+					排序
+				</span>
+        <span style="color:#4472c4; font-family:等线; font-size:14pt; font-variant:small-caps; font-weight:bold; letter-spacing:0.25pt">
+					步骤
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					每次从无序表中取出第一个元素，把它插入到
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					有序表
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					的合适位置，使
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					有序表
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					仍然有序。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					第一趟比较前两个数，然后把第二个数按大小插入到有序表中； 第二趟把第三个数据与前两个数从后向前扫描，把第三个数按大小插入到有序表中；依次进行下去，进行了(n-1)趟扫描以后就完成了整个排序过程。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					直接插入排序是由两层嵌套循环组成的。外层循环标识并决定待比较的数值。内层循环为待比较数值确定其最终位置。直接插入排序是将待比较的数值与它的前一个数值进行比较，所以外层循环是从第二个数值开始的。当前
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					一数值比待比较
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					数值大的情况下继续循环比较，直到
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					找到比待比较
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					数值小的并将待比较数值置入其后
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					一
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					位置，结束该次循环。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+        <a name="__2">
+        </a>
+        <a name="sub1193395_1_2">
+        </a>
+        <a name="基本思想">
+        </a>
+        <a name="_-2">
+					<span style="-aw-bookmark-end:__2">
+					</span>
+            <span style="-aw-bookmark-end:sub1193395_1_2">
+					</span>
+            <span style="-aw-bookmark-end:基本思想">
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					直接插入排序的时间复杂度为 O(n2)。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="color:#4472c4; font-family:等线; font-size:14pt; font-variant:small-caps; font-weight:bold; letter-spacing:0.25pt">
+					排序
+				</span>
+        <span style="color:#4472c4; font-family:等线; font-size:14pt; font-variant:small-caps; font-weight:bold; letter-spacing:0.25pt">
+					方法
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					1．简单方法
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					首先在当前
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					有序区
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					R[1..i-1]中查找R[
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					]的正确插入位置k(1≤k≤i-1)；然后将R[k
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					,
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i-1]中的记录均后移一个位置，腾出k位置上的空间插入R[
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					]。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					注意：若R[
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					]的关键字大于等于R[1
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					,
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i-1]中所有记录的关键字，则R[
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					]就是插入原位置。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					2．改进的方法
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					一种查找比较操作和记录移动操作交替地进行的方法。具体做法：
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					将待插入记录R[
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					]的关键字从右向左依次与
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					有序区
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					中记录R[j](j=i-1，i-2，…，1)的关键字进行比较：
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					1）
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					若R[j]的关键字大于R[
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					]的关键字，则将R[j]后移一个位置；
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					2）
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					若R[j]的关键字小于或等于R[
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					]的关键字，则查找过程结束，j+1即为R[
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					]的插入位置。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					关键字比R[
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					]的关键字大的记录均已后移，所以j+1的位置已经腾空，只要将R[
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					]直接插入此位置即可完成一趟直接插入排序。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="color:#4472c4; font-family:等线; font-size:14pt; font-variant:small-caps; font-weight:bold; letter-spacing:0.25pt">
+					哨兵的作用
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					算法中引进的附加记录R[0]称监视哨或哨兵(Sentinel)。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					哨兵有两个作用：
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					1）
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					进入查找(插入位置)循环之前，它保存了R[
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					]的副本，使
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					不致于
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					因记录后移而丢失R[
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					]的内容；
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					2）
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					它的主要作用是：在查找循环中"监视"下标变量j是否越界。一旦越界(即j=0)，因为R[0].可以和自己比较，循环判定条件不成立使得查找循环结束，从而避免了在该循环内的每一次均要检测j是否越界(即省略了循环判定条件"j&gt;=1")。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					注意：
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					1）
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					实际上，一切为简化边界条件而引入的附加结点(元素)均可称为哨兵。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					2）
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					引入哨兵后使得测试查找循环条件的时间大约减少了一半，所以对于记录数较大的文件节约的时间就相当可观。对于类似于排序这样使用频率非常高的算法，要尽可能地减少其运行时间。所以
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					不能把上述算法中的哨兵视为雕虫小技，而应该深刻理解并掌握这种技巧。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:center; widows:0">
+				<span style="color:#4472c4; font-family:华文彩云; font-size:22pt; font-weight:bold">
+					交换
+				</span>
+        <span style="color:#4472c4; font-family:华文彩云; font-size:22pt; font-weight:bold">
+					类排序
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="color:#4472c4; font-family:华文楷体; font-size:18pt; font-weight:bold">
+					冒泡
+				</span>
+        <span style="color:#4472c4; font-family:华文楷体; font-size:18pt; font-weight:bold">
+					排序
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					冒泡排序（Bubble Sort），是一种
+				</span>
+        <a style="color:#000000" href="https://baike.baidu.com/item/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6"
+           target="https://baike.baidu.com/item/_blank">
+					<span style="font-family:等线; font-size:12pt">
+						计算机科学
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					领域的较简单的
+				</span>
+        <a style="color:#000000" href="https://baike.baidu.com/item/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/5399605"
+           target="https://baike.baidu.com/item/_blank">
+					<span style="font-family:等线; font-size:12pt">
+						排序算法
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					它重复地走访过要排序的元素列，依次比较两个相邻的元素，如果顺序（如从大到小、首字母从Z到A）错误就把他们交换过来。走访元素的工作是重复地进行直到没有相邻元素需要交换，也就是说该元素
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					列已经
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					排序完成。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					这个算法的名字由来是因为越小的元素会经由交换慢慢“浮”到数列的顶端（升序或降序排列），就如同碳酸饮料中二氧化碳的气泡最终会上浮到顶端一样，故名“冒泡排序”。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="color:#4472c4; font-family:等线; font-size:14pt; font-variant:small-caps; font-weight:bold; letter-spacing:0.25pt">
+					算法原理
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+        <a name="ref__1__254413">
+					<span style="font-family:等线; font-size:12pt">
+						比较相邻的元素。如果第一个比第二个大，就交换他们两个。对每一对相邻元素做同样的工作，从开始第一对到结尾的最后一对。在这一点，最后的元素应该会是最大的数。针对所有的元素重复以上的步骤，除了最后一个。
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="color:#4472c4; font-family:等线; font-size:14pt; font-variant:small-caps; font-weight:bold; letter-spacing:0.25pt">
+					算法分析
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					1）
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					时间复杂度
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					若文件的初始状态是正序的，一趟扫描即可完成排序。所需的关键字比较次数
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					C
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					和记录移动次数
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					M
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					均达到最小值：
+				</span>
+        <img src="static/images/paixu1.png" width="137" height="24"
+             alt="" style="-aw-left-pos:0pt; -aw-rel-hpos:page; -aw-rel-vpos:page; -aw-top-pos:0pt; -aw-wrap-type:inline"
+        />
+        <span style="font-family:等线; font-size:12pt">
+					。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					所以，冒泡排序最好的
+				</span>
+        <a style="color:#000000" href="https://baike.baidu.com/item/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"
+           target="https://baike.baidu.com/item/_blank">
+					<span style="font-family:等线; font-size:12pt">
+						时间复杂度
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					为
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					O(n)。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					若初始文件是反序的，需要进行
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					n-1
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					趟排序。每趟排序要进行
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					n-
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					次关键字的比较(1≤i≤n-1)，且每次比较都必须移动记录三次来达到交换记录位置。在这种情况下，比较和移动次数均达到最大值：
+				</span>
+        <img src="static/images/paixu2.png" width="165" height="85"
+             alt="" style="-aw-left-pos:0pt; -aw-rel-hpos:page; -aw-rel-vpos:page; -aw-top-pos:0pt; -aw-wrap-type:inline"
+        />
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					冒泡排序的最坏时间复杂度为
+				</span>
+        <img src="static/images/paixu3.png" width="44" height="24"
+             alt="" style="-aw-left-pos:0pt; -aw-rel-hpos:page; -aw-rel-vpos:page; -aw-top-pos:0pt; -aw-wrap-type:inline"
+        />
+        <span style="font-family:等线; font-size:12pt">
+					。
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					综上，因此冒泡排序总的平均时间复杂度为
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+        <img src="static/images/paixu4.png" width="44" height="24"
+             alt="" style="-aw-left-pos:0pt; -aw-rel-hpos:page; -aw-rel-vpos:page; -aw-top-pos:0pt; -aw-wrap-type:inline"
+        />
+        <span style="font-family:等线; font-size:12pt">
+					。
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+        <a name="sub254413_2_2">
+        </a>
+        <a name="算法稳定性">
+					<span style="-aw-bookmark-end:sub254413_2_2">
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					2）
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					算法稳定性
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					冒泡排序就是把小的元素往前
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					调或者
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					把大的元素往后调。比较是相邻的两个元素比较，交换也发生在这两个元素之间。所以，如果两个元素相等，是不会再交换的；如果两个相等的元素没有相邻，那么即使通过前面的两两交换把两个相邻起来，这时候也不会交换，所以相同元素的前后顺序并没有改变，所以冒泡排序是一种
+				</span>
+        <a style="color:#000000" href="https://baike.baidu.com/item/%E7%A8%B3%E5%AE%9A%E6%8E%92%E5%BA%8F/4975546"
+           target="https://baike.baidu.com/item/_blank">
+					<span style="font-family:等线; font-size:12pt">
+						稳定排序
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					算法。
+				</span>
+        <a name="sub254413_3">
+        </a>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="color:#4472c4; font-family:华文楷体; font-size:18pt; font-weight:bold">
+					快速
+				</span>
+        <span style="color:#4472c4; font-family:华文楷体; font-size:18pt; font-weight:bold">
+					排序
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					快速排序（Quicksort）是对
+				</span>
+        <a style="color:#000000" href="https://baike.baidu.com/item/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/4602306"
+           target="https://baike.baidu.com/item/_blank">
+					<span style="font-family:等线; font-size:12pt">
+						冒泡排序
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					的一种改进。
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+        <a name="ref__1__19016">
+					<span style="font-family:等线; font-size:12pt">
+						&#xa0;
+					</span>
+        </a>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					快速排序由C. A. R. Hoare在1960年提出。它的基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以
+				</span>
+        <a style="color:#000000" href="https://baike.baidu.com/item/%E9%80%92%E5%BD%92/1740695"
+           target="https://baike.baidu.com/item/_blank">
+					<span style="font-family:等线; font-size:12pt">
+						递归
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					进行，以此达到整个数据变成有序
+				</span>
+        <a style="color:#000000" href="https://baike.baidu.com/item/%E5%BA%8F%E5%88%97/1302588"
+           target="https://baike.baidu.com/item/_blank">
+					<span style="font-family:等线; font-size:12pt">
+						序列
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					。
+				</span>
+        <span style="-aw-bookmark-end:ref__1__19016">
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="color:#4472c4; font-family:等线; font-size:14pt; font-variant:small-caps; font-weight:bold; letter-spacing:0.25pt">
+					排序流程
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					快速排序算法通过多次比较和交换来实现排序，其排序流程如下：
+				</span>
+        <a name="ref__2__19016">
+        </a>
+        <a name="ref_2">
+        </a>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					(1)首先设定一个分界值，通过该分界值将数组分成左右两部分。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					(2)将大于或等于分界值的数据集中到数组右边，小于分界值的数据集中到数组的左边。此时，左边部分中各元素都小于或等于分界值，而右边部分中各元素都大于或等于分界值。
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					(3)然后，左边和右边的数据可以独立排序。对于左侧的数组数据，又可以取一个分界值，将该部分数据分成左右两部分，同样在左边放置较小值，右边放置较大值。右侧的数组数据也可以做类似处理。
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					(4)重复上述过程，可以看出，这是一个递归定义。通过递归将左侧部分排好序后，再递归排好右侧部分的顺序。当左、右两个部分各数据排序完成后，整个数组的排序也就完成了。
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+        <span style="-aw-bookmark-end:ref__2__19016">
+				</span>
+        <span style="-aw-bookmark-end:ref_2">
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="color:#4472c4; font-family:等线; font-size:14pt; font-variant:small-caps; font-weight:bold; letter-spacing:0.25pt">
+					排序步骤
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					原理
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					：
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					设要排序
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					的
+				</span>
+        <a style="color:#000000" href="https://baike.baidu.com/item/%E6%95%B0%E7%BB%84"
+           target="https://baike.baidu.com/item/_blank">
+					<span style="font-family:等线; font-size:12pt">
+						数组
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					是A[0]……A[N-1]，首先任意选取一个数据（通常选用数组的第一个数）作为关键数据，然后将所有比它小的数都放到它左边，所有比它大的数都放到它右边，这个过程称为一
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					趟快速排序。值得注意的是，快速排序不是一种稳定的
+				</span>
+        <a style="color:#000000" href="https://baike.baidu.com/item/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95"
+           target="https://baike.baidu.com/item/_blank">
+					<span style="font-family:等线; font-size:12pt">
+						排序算法
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					，也就是说，多个相同的值的相对位置也许会在算法结束时产生变动。
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+        <a name="ref_1">
+        </a>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					一趟快速排序的算法是：
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					1）设置两个变量
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					、j，
+				</span>
+        <a style="color:#000000" href="https://baike.baidu.com/item/%E6%8E%92%E5%BA%8F"
+           target="https://baike.baidu.com/item/_blank">
+					<span style="font-family:等线; font-size:12pt">
+						排序
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					开始的时候：
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					=0，j=N-1；
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					2）以第一个数组元素作为关键数据，赋值给key，即key=A[0]；
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					3）从j开始向前搜索，即由后开始向前搜索(j--)，找到第一个小于key的值A[j]，将A[j]和A[
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					]的值交换；
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					4）从
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					开始向后搜索，即由前开始向后搜索(
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					++)，找到第一个大于key的A[
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					]，将A[
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					]和A[j]的值交换；
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					5）重复第3、4步，直到
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					=j； (3,4步中，没找到符合条件的值，即3中A[j]不小于key,4中A[
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					]不大于key的时候改变j、
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					的值，使得j=j-1，
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					=i+1，直至找到为止。找到符合条件的值，进行交换的时候
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					， j指针位置不变。另外，
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					==j这一过程一定正好是
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					+或j-完成的时候，此时令循环结束）。
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+        <span style="-aw-bookmark-end:ref_1">
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="color:#4472c4; font-family:等线; font-size:14pt; font-variant:small-caps; font-weight:bold; letter-spacing:0.25pt">
+					算法示例
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					假设一开始序列{xi}是：5，3，7，6，4，1，0，2，9，10，8。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					此时，ref=5，
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					=1，j=11，从后往前找，第一个比5小的数是x8=2，因此序列为：2，3，7，6，4，1，0，5，9，10，8。此时
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					=1，j=8，从前往后找，第一个比5大的数是x3=7，因此序列为：2，3，5，6，4，1，0，7，9，10，8。此时，
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					=3，j=8，从第8位往前找，第一个比5小的数是x7=0，因此：2，3，0，6，4，1，5，7，9，10，8。此时，
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					=3，j=7，从第3位往后找，第一个比5大的数是x4=6，因此：2，3，0，5，4，1，6，7，9，10，8。此时，
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					=4，j=7，从第7位往前找，第一个比5小的数是x6=1，因此：2，3，0，1，4，5，6，7，9，10，8。此时，
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					=4，j=6，从第4位往后找，直到第6位才有比5大的数，这时，
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					=j=6，ref成为一条分界线，它之前的数都比它小，之后的数都比它大，对于前后两部分数，可以采用同样的方法来排序。
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+        <a name="ref_3">
+        </a>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+        <a name="sub19016_3">
+        </a>
+        <a name="程序调用举例">
+        </a>
+        <a name="_Toc17866">
+					<span style="-aw-bookmark-end:sub19016_3">
+					</span>
+            <span style="-aw-bookmark-end:程序调用举例">
+					</span>
+            <span style="color:#4472c4; font-family:等线; font-size:14pt; font-variant:small-caps; font-weight:bold; letter-spacing:0.25pt">
+						性能分析
+					</span>
+        </a>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					1）
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					快速排序的一次划分算法从两头交替搜索，直到low和high重合，因此其时间复杂度是O(n)；
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					而整个快速排序算法的时间复杂度与划分的趟数有关。
+				</span>
+        <a name="ref__4__19016">
+					<span style="font-family:等线; font-size:12pt">
+						&#xa0;
+					</span>
+        </a>
+        <a name="ref_4">
+        </a>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					理想的情况是，每次划分所选择的中间数恰好将当前序列几乎等分，经过log2n趟划分，便可得到长度为1的子表。这样，整个算法的时间复杂度为O(nlog2n)。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					最坏的情况是，每次所选的中间数是当前序列中的最大或最小元素，这使得每次划分所得的子表中一个为空表，另一子表的长度
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					为原表的
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					长度-1。这样，长度为n的数据表的快速排序需要经过n趟划分，使得整个排序算法的时间复杂度为O(n2)。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					为改善最坏情况下的时间性能，可采用其他方法选取中间数。通常采用“三者值取中”方法，即比较H-&gt;r[low].key、H-&gt;r[high].key与H-&gt;r[(10w+high)/2].key，取三者中关键字为中值的元素为中间数。
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					可以证明，快速排序的平均时间复杂度也是O(nlog2n)。因此，该排序方法被认为是目前最好的一种内部排序方法。
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+        <span style="-aw-bookmark-end:ref_4">
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					2）
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					从空间性能上看，尽管快速排序只需要一个元素的辅助空间，但快速排序需要一个
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					栈
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					空间来实现递归。最好的情况下，即快速排序的每一趟排序都将元素序列均匀地分割成长度相近的两个子表，所需
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					栈
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					的最大深度为log2(n+1)；但最坏的情况下，
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					栈
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					的最大深度为n。这样，快速排序的空间复杂度为O(log2n))。
+				</span>
+        <span style="-aw-bookmark-end:ref__4__19016">
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:center; widows:0">
+        <a name="_Toc1809">
+					<span style="color:#4472c4; font-family:华文彩云; font-size:22pt; font-weight:bold">
+						选择类
+					</span>
+        </a>
+        <span style="color:#4472c4; font-family:华文彩云; font-size:22pt; font-weight:bold">
+					排序
+				</span>
+        <a name="_Toc24423">
+        </a>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="color:#4472c4; font-family:华文楷体; font-size:18pt; font-weight:bold">
+					简单选择排序
+				</span>
+        <span style="-aw-bookmark-end:_Toc24423">
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+        <a name="_Toc28818">
+					<span style="color:#4472c4; font-family:等线; font-size:14pt; font-variant:small-caps; font-weight:bold; letter-spacing:0.25pt">
+						定义
+					</span>
+        </a>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					简单选择排序是指一种排序算法，在简单选择排序过程中，所需移动记录的次数比较少。最好情况下，即待排序记录初始状态就已经是正序排列了，则不需要移动记录。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					方法
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					是设所排序
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					序列的记录个数为n。
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					取1,2,…,n-1,从所有n-i+1个记录（Ri,Ri+1,…,Rn）中找出排序码最小的记录，与第
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					个
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					记录交换。执行n-1趟 后就完成了记录序列的排序
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+        <a name="_Toc25212">
+					<span style="color:#4472c4; font-family:等线; font-size:14pt; font-variant:small-caps; font-weight:bold; letter-spacing:0.25pt">
+						算法分析
+					</span>
+        </a>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					在简单选择排序过程中，所需移动记录的次数比较少。最好情况下，即待排序记录初始状态就已
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					经是正序排列了，则不需要移动记录。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					最坏情况下，即待排序记录初始状态是按第一条记录最小，之后的记录从小到大顺序排列，则需要移动记录的次数最多为3（n-1）。简单选择排序过程中需要进行的比较次数与
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					初始状态下待
+				</span>
+        <a style="color:#000000" href="https://baike.baidu.com/item/%E6%8E%92%E5%BA%8F"
+           target="https://baike.baidu.com/item/_blank">
+					<span style="font-family:等线; font-size:12pt">
+						排序
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					的
+				</span>
+        <a style="color:#000000" href="https://baike.baidu.com/item/%E8%AE%B0%E5%BD%95/1837758"
+           target="https://baike.baidu.com/item/_blank">
+					<span style="font-family:等线; font-size:12pt">
+						记录
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					序列的排列情况无关。当
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					=1时，需进行n-1次比较；当
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					i
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					=2时，需进行n-2次比较；依次类推，共需要进行的比较次数是(n-1)+(n-2)+…+2+1=n(n-1)/2，即进行比较操作的
+				</span>
+        <a style="color:#000000" href="https://baike.baidu.com/item/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"
+           target="https://baike.baidu.com/item/_blank">
+					<span style="font-family:等线; font-size:12pt">
+						时间复杂度
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					为O(n^2)，进行移动操作的时间复杂度为O(n)。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					简单选择排序是不稳定排序。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+        <a name="_Toc171">
+					<span style="color:#4472c4; font-family:华文楷体; font-size:18pt; font-weight:bold">
+						堆排序
+					</span>
+        </a>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					堆排序
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					（Heapsort）是指利用
+				</span>
+        <a style="color:#000000" href="https://baike.baidu.com/item/%E5%A0%86"
+           target="https://baike.baidu.com/item/_blank">
+					<span style="font-family:等线; font-size:12pt">
+						堆
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					这种数据结构所设计的一种
+				</span>
+        <a style="color:#000000" href="https://baike.baidu.com/item/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95"
+           target="https://baike.baidu.com/item/_blank">
+					<span style="font-family:等线; font-size:12pt">
+						排序算法
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					。堆是一个近似
+				</span>
+        <a style="color:#000000" href="https://baike.baidu.com/item/%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91"
+           target="https://baike.baidu.com/item/_blank">
+					<span style="font-family:等线; font-size:12pt">
+						完全二叉树
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					的结构，并同时满足堆积的性质：即子结点的键值或索引总是小于（或者大于）它的父节点。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+        <a name="_Toc9525">
+					<span style="color:#4472c4; font-family:等线; font-size:14pt; font-variant:small-caps; font-weight:bold; letter-spacing:0.25pt">
+						堆的操作
+					</span>
+        </a>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					在堆的
+				</span>
+        <a style="color:#000000" href="https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"
+           target="https://baike.baidu.com/item/_blank">
+					<span style="font-family:等线; font-size:12pt">
+						数据结构
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					中，堆中的最大值总是位于根节点（在优先队列中使用堆的话堆中的最小值位于根节点）。堆中定义以下几种操作：
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					最大堆调整（Max
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					Heapify
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					）：将堆的末端子节点作调整，使得子节点永远小于父节点
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					创建最大堆（Build Max Heap）：将堆中的所有数据重新排序
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					堆排序（
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					HeapSort
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					）：移除位在第一个数据的根节点，并做最大
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					堆调整
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					的
+				</span>
+        <a style="color:#000000" href="https://baike.baidu.com/item/%E9%80%92%E5%BD%92"
+           target="https://baike.baidu.com/item/_blank">
+					<span style="font-family:等线; font-size:12pt">
+						递归
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					运算
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					[1]
+				</span>
+        <a name="ref__1__157305">
+					<span style="font-family:等线; font-size:12pt">
+						&#xa0;
+					</span>
+        </a>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+        <a name="_Toc24984">
+					<span style="color:#4472c4; font-family:等线; font-size:14pt; font-variant:small-caps; font-weight:bold; letter-spacing:0.25pt">
+						算法分析
+					</span>
+        </a>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					现定了一维数组，需要将数组中的元素使用堆排序。首先，
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					得创建
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					一个堆，可以在这个给定的一维数组上建堆。对N
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					个
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					元素
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					，
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					建堆的
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					时间复杂度为O(N)
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					堆排序具体的细节实现有两种方式：一种方式是将堆顶元素删除后，放到一个辅助数组中，然后进行
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					堆调整
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					使之成为一个新堆。接下来，继续删除堆顶元素，直至将堆中所有的元素都出堆，此时排序完成。这种方式需要一个额外的辅助空间O(N)
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					另一种方式是：将每次删除的堆顶元素放到数组的末尾。因为，对于堆的基本操作
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					delMin
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					/
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					delMax
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					而言（
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					delMin
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					针对的是
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					小顶堆
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					，
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					delMax
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					针对的是大顶堆，原理一样）是将堆中的最后一个元素替换
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					堆顶元素，然后向下进行堆调整。因此，可以利用这个特点将每次删除的堆顶元素保存在数组末尾，当所有的元素都出堆后，数组就排好序了。这种方式不需要额外的辅助空间，空间复杂度为O(1)
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:center; widows:0">
+				<span style="color:#4472c4; font-family:华文彩云; font-size:22pt; font-weight:bold">
+					归并类
+				</span>
+        <span style="color:#4472c4; font-family:华文彩云; font-size:22pt; font-weight:bold">
+					排序
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+        <a name="_Toc2790">
+					<span style="color:#4472c4; font-family:华文楷体; font-size:18pt; font-weight:bold">
+						归并排序
+					</span>
+        </a>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					归并排序（MERGE-SORT）是建立在归并操作上的一种有效的排序算法,该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					有序表
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					合并成一个有序表，称为二路
+				</span>
+        <a style="color:#000000" href="https://baike.baidu.com/item/%E5%BD%92%E5%B9%B6/253741"
+           target="https://baike.baidu.com/item/_blank">
+					<span style="font-family:等线; font-size:12pt">
+						归并
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					。归并排序是一种稳定的排序方法。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+        <a name="sub90797_2">
+        </a>
+        <a name="算法描述">
+        </a>
+        <a name="_Toc22319">
+					<span style="-aw-bookmark-end:sub90797_2">
+					</span>
+            <span style="-aw-bookmark-end:算法描述">
+					</span>
+            <span style="color:#4472c4; font-family:等线; font-size:14pt; font-variant:small-caps; font-weight:bold; letter-spacing:0.25pt">
+						算法描述
+					</span>
+        </a>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					所谓归并
+				</span>
+        <a style="color:#000000" href="https://baike.baidu.com/item/%E6%8E%92%E5%BA%8F"
+           target="https://baike.baidu.com/item/_blank">
+					<span style="font-family:等线; font-size:12pt">
+						排序
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					是指将两个或两个以上有序的数列（或有序表），合并成一个仍然有序的数列（或有序表）。这样的排序方法经常用于多个有序的数据文件归并成一个有序的数据文件。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					归并操作的工作原理如下：
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					第一步：申请空间，使其大小为两个已经
+				</span>
+        <a style="color:#000000" href="https://baike.baidu.com/item/%E6%8E%92%E5%BA%8F"
+           target="https://baike.baidu.com/item/_blank">
+					<span style="font-family:等线; font-size:12pt">
+						排序
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					序列之和，该空间用来存放合并后的序列
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					第二步：设定两个
+				</span>
+        <a style="color:#000000" href="https://baike.baidu.com/item/%E6%8C%87%E9%92%88"
+           target="https://baike.baidu.com/item/_blank">
+					<span style="font-family:等线; font-size:12pt">
+						指针
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					，最初位置分别为两个已经排序序列的起始位置
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					第三步：比较两个指针所指向的元素，选择相对小的元素放入到合并空间，并移动指针到下一位置
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					重复步骤3直到某一指针超出
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					序列尾将另
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					一序列剩下的所有元素直接复制到合并序列尾
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+        <a name="_Toc13949">
+					<span style="color:#4472c4; font-family:等线; font-size:14pt; font-variant:small-caps; font-weight:bold; letter-spacing:0.25pt">
+						算法示例
+					</span>
+        </a>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					设有数列为  9，89，12，58，16，23，56，31。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					则第一次归并后为{9，89}，{12，58}，{16，23}，{31，56}
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					第二次归并后为{9，12，58，89}，{16，23，31，56}
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					第三次归并后为{9，12，16，23，31，56，58，89}
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+        <a name="sub90797_3">
+        </a>
+        <a name="比较">
+        </a>
+        <a name="_Toc4369">
+					<span style="-aw-bookmark-end:sub90797_3">
+					</span>
+            <span style="-aw-bookmark-end:比较">
+					</span>
+            <span style="color:#4472c4; font-family:等线; font-size:14pt; font-variant:small-caps; font-weight:bold; letter-spacing:0.25pt">
+						算法比较
+					</span>
+        </a>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					归并
+				</span>
+        <a style="color:#000000" href="https://baike.baidu.com/item/%E6%8E%92%E5%BA%8F"
+           target="https://baike.baidu.com/item/_blank">
+					<span style="font-family:等线; font-size:12pt">
+						排序
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					是稳定的排序.即相等的元素的顺序不会改变.如输入记录 1(1) 3(2) 2(3) 2(4) 5(5) (括号中
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					是记录的关键字)时输出的 1(1) 2(3) 2(4) 3(2) 5(5) 中的2 和 2 是按输入的顺序.这对要排序数据包含多个信息而要按其中的某一个信息排序,要求其它信息尽量按输入的顺序排列时很重要。归并排序的比较次数小于快速排序的比较次数，移动次数一般多于快速排序的移动次数。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:center; widows:0">
+        <a name="_Toc23438">
+					<span style="color:#4472c4; font-family:华文彩云; font-size:22pt; font-weight:bold">
+						其他方法
+					</span>
+        </a>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+        <a name="_">
+        </a>
+        <a name="sub90797_4">
+        </a>
+        <a name="用途">
+        </a>
+        <a name="_Toc25182">
+					<span style="-aw-bookmark-end:_">
+					</span>
+            <span style="-aw-bookmark-end:sub90797_4">
+					</span>
+            <span style="-aw-bookmark-end:用途">
+					</span>
+            <span style="color:#4472c4; font-family:华文楷体; font-size:18pt; font-weight:bold">
+						基数排序
+					</span>
+        </a>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					基数排序（radix sort）属于“分配式排序”（distribution sort），又称“桶子法”（bucket sort）或bin
+					sort，顾名思义，它是透过键值的部份资讯，将要排序的
+				</span>
+        <a style="color:#000000" href="https://baike.baidu.com/item/%E5%85%83%E7%B4%A0%E5%88%86%E9%85%8D/2107419"
+           target="https://baike.baidu.com/item/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/_blank">
+					<span style="font-family:等线; font-size:12pt">
+						元素分配
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					至某些“桶”中，藉以达到排序的作用，基数排序法是属于稳定性的排序，其
+				</span>
+        <a style="color:#000000" href="https://baike.baidu.com/item/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/1894057"
+           target="https://baike.baidu.com/item/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/_blank">
+					<span style="font-family:等线; font-size:12pt">
+						时间复杂度
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					为O (
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					nlog
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					(r)m)，其中r为所采取的基数，而m为堆数，在某些时候，基数排序法的效率高于其它的稳定性排序法。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+        <a name="_Toc16351">
+					<span style="color:#4472c4; font-family:等线; font-size:14pt; font-variant:small-caps; font-weight:bold; letter-spacing:0.25pt">
+						算法示例
+					</span>
+        </a>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					假设有一组数值为 9，12，58，16，23，56，31，89，则首先按照
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					个
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					位数的数值，从小到大排序为:31，12，23，16，56，58，9，89的数列，再按照十位数的数值从小到大进行排序则可以获得排序完成的数列为：9，12，16，23，31，56，58，89。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+        <a name="_Toc11201">
+					<span style="color:#4472c4; font-family:等线; font-size:14pt; font-variant:small-caps; font-weight:bold; letter-spacing:0.25pt">
+						算法效率分析
+					</span>
+        </a>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+        <a name="_">
+        </a>
+        <a name="sub1170573_2">
+        </a>
+        <a name="效率分析">
+					<span style="-aw-bookmark-end:_">
+					</span>
+            <span style="-aw-bookmark-end:sub1170573_2">
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					时间效率
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					[1]
+				</span>
+        <a name="ref__1__1170573">
+					<span style="font-family:等线; font-size:12pt">
+						&#xa0;
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					&#xa0;
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					：
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					设待排序
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					列为n
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					个
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					记录，d
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					个
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					关键码，关键码的取值范围为radix，则进行链式基数排序的
+				</span>
+        <a style="color:#000000" href="https://baike.baidu.com/item/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"
+           target="https://baike.baidu.com/item/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/_blank">
+					<span style="font-family:等线; font-size:12pt">
+						时间复杂度
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					为O(d(
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					n+radix
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					))，其中，一趟分配时间复杂度为O(n)，一趟收集时间复杂度为O(radix)，共进行d
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					趟分配
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					和收集。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					空间效率：需要2*radix
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					个
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					指向队列的辅助空间，以及用于
+				</span>
+        <a style="color:#000000" href="https://baike.baidu.com/item/%E9%9D%99%E6%80%81%E9%93%BE%E8%A1%A8"
+           target="https://baike.baidu.com/item/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/_blank">
+					<span style="font-family:等线; font-size:12pt">
+						静态链表
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					的n
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					个
+				</span>
+        <a style="color:#000000" href="https://baike.baidu.com/item/%E6%8C%87%E9%92%88"
+           target="https://baike.baidu.com/item/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/_blank">
+					<span style="font-family:等线; font-size:12pt">
+						指针
+					</span>
+        </a>
+        <span style="font-family:等线; font-size:12pt">
+					。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+        <a name="_">
+        </a>
+        <a name="sub1170573_3">
+        </a>
+        <a name="实现方法">
+        </a>
+        <a name="_Toc17452">
+					<span style="-aw-bookmark-end:_">
+					</span>
+            <span style="-aw-bookmark-end:sub1170573_3">
+					</span>
+            <span style="-aw-bookmark-end:实现方法">
+					</span>
+            <span style="color:#4472c4; font-family:等线; font-size:14pt; font-variant:small-caps; font-weight:bold; letter-spacing:0.25pt">
+						实现方法
+					</span>
+        </a>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; text-indent:21pt; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					最高位优先(Most Significant Digit first)法，简称MSD法：先按k1排序分组，同一组中记录，关键码k1相等，再对各组按k2排序分成子组，之后，对后面的关键码继续这样的排序分组，直到按最次位关键码
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					kd
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					对各子组排序后。再将各组连接起来，便得到一个有序序列。
+				</span>
+    </p>
+    <p style="margin:0pt; orphans:0; text-align:justify; widows:0">
+				<span style="font-family:等线; font-size:12pt">
+					最低位优先(Least Significant Digit first)法，简称LSD法：先从
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					kd
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					开始排序，再对kd-1进行排序，依次重复，直到对k1排序后便得到一个有序
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					序
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					s
+				</span>
+        <span style="font-family:等线; font-size:12pt">
+					列。
+				</span>
+    </p>
+</div>
+<div class="cnzz" style="display: none;">
+    <script src="https://s23.cnzz.com/z_stat.php?id=1277655852&web_id=1277655852"
+            language="JavaScript">
+    </script>
+</div>
+<div class="docpe" style="position: absolute;color: white;margin-left:-450;">
+</div>
+</body>
+
+</html>

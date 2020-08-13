@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>文章管理</title>
+<link href="static/css/style.css" rel="stylesheet" type="text/css" />
+<link href="static/css/select.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="static/js/jquery.js"></script>
+<script type="text/javascript" src="static/js/jquery.idTabs.min.js"></script>
+<script type="text/javascript" src="static/js/select-ui.min.js"></script>
+<script type="text/javascript" src="static/editor/kindeditor.js"></script>
+
+<script type="text/javascript">
+    KE.show({
+        id : 'content7',
+        cssPath : './index.css'
+    });
+  </script>
+  
+<script type="text/javascript">
+$(document).ready(function(e) {
+    $(".select1").uedSelect({
+		width : 345			  
+	});
+	$(".select2").uedSelect({
+		width : 167  
+	});
+	$(".select3").uedSelect({
+		width : 100
+	});
+});
+</script>
+</head>
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="leftHtml">数据结构知识点管理系统</a></li>
+    <li><a href="#">内容查看</a></li>
+    </ul>
+    </div>
+    
+    <div class="formbody">
+    
+    
+    <div id="usual1" class="usual"> 
+    
+    <div class="itab">
+  	<ul> 
+    <li><a href="#tab1" class="selected">知识点列表</a></li>
+  	</ul>
+    </div> 
+    
+
+    
+  	<div id="tab1" class="tabson">
+
+    
+    
+    <table class="tablelist">
+    	<thead>
+    	<tr>
+        <th>编号<i class="sort"><img src="static/images/px.gif" /></i></th>
+        <th>标题</th>
+        <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+
+        <td>001</td>
+        <td>数组线性表类</td>
+            <td><a href="xianxingbiaoHtml" class="tablelink">查看</a>  </td>
+        </tr> 
+        
+        <tr>
+
+        <td>001</td>
+        <td>链表类</td>
+            <td><a href="xianxingbiaoHtml" class="tablelink">查看</a>  </td>
+        </tr>
+        
+        <tr>
+
+        <td>003</td>
+        <td>数组类</td>
+            <td><a href="xianxingbiaoHtml" class="tablelink">查看</a>  </td>
+        </tr>
+        
+        <tr>
+
+        <td>004</td>
+        <td>队列概述</td>
+
+        <td><a href="duilieHtml" class="tablelink">查看</a>  </td>
+        </tr>
+        
+        <tr>
+
+        <td>005</td>
+        <td>集合的概述</td>
+        <td><a href="jiheHtml" class="tablelink">查看</a>   </td>
+        </tr>
+
+        <tr>
+
+            <td>006</td>
+            <td>集合的分类</td>
+            <td><a href="jiheHtml" class="tablelink">查看</a>   </td>
+        </tr>
+
+        <tr>
+
+            <td>007</td>
+            <td>树的概述</td>
+            <td><a href="shuHtml" class="tablelink">查看</a>  </td>
+        </tr>
+        <tr>
+
+            <td>008</td>
+            <td>最小生成树算法</td>
+            <td><a href="shuHtml" class="tablelink">查看</a>  </td>
+        </tr>
+        <tr>
+
+            <td>009</td>
+            <td>哈夫曼编码</td>
+            <td><a href="shuHtml" class="tablelink">查看</a>  </td>
+        </tr>
+        <tr>
+
+            <td>010</td>
+            <td>图的概述</td>
+            <td><a href="tuHtml" class="tablelink">查看</a>  </td>
+        </tr>
+        <tr>
+
+            <td>011</td>
+            <td>图的表示方法</td>
+            <td><a href="tuHtml" class="tablelink">查看</a>    </td>
+        </tr>
+        <tr>
+
+            <td>012</td>
+            <td>图的遍历</td>
+            <td><a href="tuHtml" class="tablelink">查看</a>  </td>
+        </tr>
+        <tr>
+
+            <td>013</td>
+            <td>图的最优路径</td>
+            <td><a href="tuHtml" class="tablelink">查看</a>  </td>
+        </tr>
+        <tr>
+
+            <td>014</td>
+            <td>插入类排序</td>>
+            <td><a href="paixuHtml" class="tablelink">查看</a>   </td>
+        </tr>
+        <tr>
+
+            <td>015</td>
+            <td>交换类排序</td>
+            <td><a href="paixuHtml" class="tablelink">查看</a>   </td>
+        </tr>
+        <tr>
+
+            <td>016</td>
+            <td>选择类排序</td>
+            <td><a href="paixuHtml" class="tablelink">查看</a>  </td>
+        </tr>
+        <tr>
+
+            <td>017</td>
+            <td>归并类排序</td>
+            <td><a href="paixuHtml" class="tablelink">查看</a>   </td>
+        </tr>
+        <tr>
+
+            <td>018</td>
+            <td>其他类排序</td>
+            <td><a href="paixuHtml" class="tablelink">查看</a>   </td>
+        </tr>
+        <tr>
+
+            <td>019</td>
+            <td>查找的基本概念</td>
+            <td><a href="chazhaoHtml" class="tablelink">查看</a> </td>
+        </tr>
+        <tr>
+            <td>020</td>
+            <td>查找的方式分类</td>
+            <td><a href="chazhaoHtml" class="tablelink">查看</a>  </td>
+        </tr>
+        </tbody>
+    </table>
+    
+   
+  
+    
+    </div>  
+       
+	</div> 
+ 
+	<script type="text/javascript"> 
+      $("#usual1 ul").idTabs(); 
+    </script>
+    
+    <script type="text/javascript">
+	$('.tablelist tbody tr:odd').addClass('odd');
+	</script>
+    
+    
+    
+    
+    
+    </div>
+
+
+</body>
+
+</html>
