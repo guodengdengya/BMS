@@ -1,19 +1,12 @@
 package com.example.datastructure.controller;
 
-
-
 import com.example.datastructure.mapper.UserMapper;
 import com.example.datastructure.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-
-
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
-
 
 @Controller
 public class maincontroller {
@@ -23,11 +16,33 @@ public class maincontroller {
     public String login(HttpServletRequest request,Map<String,Object> map){
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        User loginuser = userMapper.login(username, password);
-        System.out.println(loginuser);
-        //map.put("msg2","the user "+loginuser+"login");
+        System.out.println(username);
+        if(username!=null && password!=null){
+           // System.out.println("进来了");
+            User loginuser = userMapper.login(username, password);
+           if(loginuser!=null){
+               return "left";
+           }
+        }
         return "login";
     }
+
+
+    @RequestMapping("/updateuser")
+    public String updata(HttpServletRequest request,Map<String,Object> map){
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        User getuser = userMapper.getuser(username);
+        if(getuser!=null){
+            userMapper.updateuser(username,password);
+            map.put("msg4","the user has been updated!");
+            return"login";
+        }else{
+            map.put("msg4","the user is not a legal user" );
+            return"login";
+        }
+    }
+
     @RequestMapping("/leftHtml")
     public String reg1(){
         return "left";
