@@ -32,14 +32,14 @@ public class maincontroller {
     public String updata(HttpServletRequest request,Map<String,Object> map){
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        User getuser = userMapper.getuser(username);
+        String nepassword  = request.getParameter("newpassword");
+        User getuser = userMapper.login(username,password);
         if(getuser!=null){
-            userMapper.updateuser(username,password);
-            map.put("msg4","the user has been updated!");
-            return"login";
+            userMapper.updateuser(username,nepassword);
+             return"login";
         }else{
-            map.put("msg4","the user is not a legal user" );
-            return"login";
+            map.put("msg4","您输入的用户名不存在或原密码错误" );
+            return"imgtable";
         }
     }
 
