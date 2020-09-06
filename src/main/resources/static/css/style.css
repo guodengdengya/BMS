@@ -1,10 +1,5 @@
 ﻿@charset "utf-8";
-/* CSS Document */
-/***
- * uimaker
- * http://www.uimaker.com
- * e-mail: admin@uimaker.com
- */
+
 *{font-size:9pt;border:0;margin:0;padding:0;}
 body{font-family:'微软雅黑'; margin:0 auto;min-width:980px;}
 ul{display:block;margin:0;padding:0;list-style:none;}
@@ -46,7 +41,6 @@ h2{font-weight:normal;}
 .loginbm{height:50px; line-height:50px; text-align:center; background:url(../images/loginbg2.png) repeat-x;position:absolute; bottom:0; width:100%; color:#0b3a58;}
 .loginbm a{font-weight:bold;color:#0b3a58;}
 .loginbm a:hover{color:#fff;}
-
 
 /*top.html*/
 .header{height:88px;}
@@ -90,6 +84,7 @@ h2{font-weight:normal;}
 .menuson li a{ display:block; *display:inline; *padding-top:5px;}
 .menuson li.active a{color:#fff;}
 .title{cursor:pointer;}
+
 /*test*/
 .index{width:1500px;height:800px;position:absolute;left:320px;top:60px;}
 
