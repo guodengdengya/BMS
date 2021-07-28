@@ -33,7 +33,7 @@ public class articalcontroller {
         a.setType(type);
         a.setDetails(details);
         articlerMapper.addArticle(a);
-        return "redirect:/articleHtml";
+        return "redirect:/articleHtml";//重定向
     }
 
     @RequestMapping("/query")
@@ -42,8 +42,8 @@ public class articalcontroller {
         List<article> articles = articlerMapper.getArticle(biaoti);
         model.addAttribute("articles",articles);
         return "article";
-
     }
+
     @RequestMapping("/shanchu")
     public  String deletearticle(article ac){
 

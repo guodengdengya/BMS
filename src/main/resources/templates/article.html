@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>文章管理</title>
+<title>书籍管理</title>
 <link href="static/css/style.css" rel="stylesheet" type="text/css" />
 <link href="static/css/select.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="static/js/jquery.js"></script>
@@ -51,8 +51,8 @@ $(document).ready(function(e) {
 	<div class="place">
     <span>位置：</span>
     <ul class="placeul">
-    <li><a href="leftHtml">数据结构知识点管理系统</a></li>
-    <li><a href="#">内容查看</a></li>
+    <li><a href="leftHtml">图书管理系统</a></li>
+    <li><a href="#">书籍管理</a></li>
     </ul>
     </div>
     
@@ -63,8 +63,8 @@ $(document).ready(function(e) {
     
     <div class="itab">
   	<ul> 
-    <li><a href="#tab1" class="selected">文章查看</a></li>
-    <li><a href="#tab2">文章发布</a></li>
+    <li><a href="#tab1" class="selected">书籍查看</a></li>
+    <li><a href="#tab2">新增书籍</a></li>
 
   	</ul>
     </div>
@@ -99,7 +99,7 @@ $(document).ready(function(e) {
                         <td th:text="${articles.type}"></td>
                         <td th:text="${articles.details}"></td>
                         <!-- -->
-                        <td> <a th:href="@{/gengxin?(id=${articles.id})}">更新</a>&nbsp&nbsp &nbsp&nbsp<a th:href="@{/shanchu?(id=${articles.id})}">删除</a>   </td>
+                        <td> <a th:href="@{/gengxin?(id=${articles.id})}">修改</a>&nbsp&nbsp &nbsp&nbsp<a th:href="@{/shanchu?(id=${articles.id})}">删除</a>   </td>
                     </tr>
 
 
@@ -111,12 +111,12 @@ $(document).ready(function(e) {
 
         <div id="tab2" class="tabson">
 
-            <div class="formtext">欢迎使用文章发布功能</div>
+            <div class="formtext">欢迎使用新增书籍功能</div>
             <form action="/addArticle" method="post">
             <ul class="forminfo">
-                <li><label>文章标题</label><input name="type" type="text" class="dfinput" /></li>
-                <li><label>文章内容</label><textarea name="details" cols="" rows="" class="textinput"></textarea></li>
-                <li><label>&nbsp;</label><input name="" type="submit" class="btn" value="确认发布"/></li>
+                <li><label>书籍标题</label><input name="type" type="text" class="dfinput" /></li>
+                <li><label>书籍简介</label><textarea name="details" cols="" rows="" class="textinput"></textarea></li>
+                <li><label>&nbsp;</label><input name="" type="submit" class="btn" value="确认增加"/></li>
             </ul>
             </form>
         </div>
